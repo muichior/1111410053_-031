@@ -1,0 +1,35 @@
+  using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace _0413
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("輸入一個0索引的字串陣列(words)，以逗號分隔: ");
+            string[] words = Console.ReadLine().Split(',');// Split=用逗號 , 分割成多個字串，儲存在 words 
+
+            Console.WriteLine("請輸入一個字元(x): ");
+            char x = Console.ReadLine()[0];//取第一個字元，儲存在 x 
+
+            Console.Write("輸出: [");
+            for (int i = 0; i < words.Length; i++)
+            {
+                if (words[i].Contains(x.ToString()))//檢查每個字串（words[i]）是否含字元 x
+                {
+                    Console.Write(i);
+                    if (i < words.Length - 1)//檢查i 是否小於 words 長度- 1。
+                    {
+                        Console.Write(", ");
+                    }
+                }
+            }
+            Console.WriteLine("]");
+        }
+    }
+}
