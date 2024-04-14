@@ -1,0 +1,50 @@
+   using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace _0413
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("請輸入一個整數:");
+            if (int.TryParse(Console.ReadLine(), out int num)) //Console.ReadLine()：文字輸入
+                                                                                                      //int.TryParse(..., out int num)：文字轉為整數。
+                                                                                                      //如果成功，整數存在 num ，並返回 true
+                                                                                                      //如果失敗，num 為 0，並返回 false。
+            {
+                Console.WriteLine($"整數 {num} 的羅馬數字為: {new Number().IntToRoman(num)}");
+            }
+            else
+            {
+                Console.WriteLine("輸入的不是整數。");
+            }
+        }
+        internal class Number
+        {
+            internal string IntToRoman(int num)
+            {
+                string x = String.Empty; //創一個空字串給x來儲存轉換的羅馬數字
+                List<int> val = new List<int> { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };//建立整數陣列
+                List<string> str = new List<string> { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
+                //建立羅馬數字陣列
+                for (int i = 0; i < val.Count; i++)//從 0開始，查當前數值 num 是否大於或等於 val[i]
+                {
+                    while (num >= val[i])//只要數值 num 大於或等於 val[i]
+                    {
+                        num -= val[i];//將 num 減去 val[i]
+                        x += str[i];//將對應的數字符號 str[i] 加到字串 x 中。
+                    }
+                }
+                return x;//結果回傳字串x
+            }
+        }
+    }
+}
+
+C#版 - Leetcode 12. 整数转罗马数字 - 题解-腾讯云开发者社区-腾讯云 (tencent.com)
+C#版 - Leetcode 12. 整数转罗马数字 - 题解-腾讯云开发者社区-腾讯云 (tencent.com)
