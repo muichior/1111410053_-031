@@ -1,0 +1,55 @@
+<DOCTYPE.html>
+    <html>
+    <head>
+        <meta charset ="utf-8">
+        <meta content="text/html"/>
+    <title> </title> 
+     <!-- html註解: 其他子tag--> 
+        <!-- html註解: 放CSS設計樣式表 -->
+        <!--用link串接CSS檔案 -->
+        <!--直接在style age中寫 CSS設定 -->
+    <script>
+        /* 本區塊放Java Script程式碼..    */
+        <!--JS也可以外掛檔-->
+        
+    </script>
+    
+    
+     <style>
+
+     </style>    
+<!--JS可以放本檔-->
+    </head>
+    
+    <body>  
+        
+    <header>
+  <!--內文的表頭,圖片...横幅區塊-->
+    </header>
+
+    <nav>
+ <!--導覽列-->
+        </nav>
+
+      <main>
+
+     
+      <article>
+
+      </article>
+
+     </main>
+
+     <aside>
+ <!--右方側欄,小故事,小廣告,..相關文章的link-->
+     </aside>
+
+    <footer>
+<!--頁底. 授權copyright 年份,作者....-->
+    </footer>
+        </body> 
+    
+    </html>
+    
+    
+    
